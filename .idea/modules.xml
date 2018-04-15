@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TfLCodingChallenge.iml" filepath="$PROJECT_DIR$/.idea/TfLCodingChallenge.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tflCodingChallenge/tflCodingChallenge.iml" filepath="$PROJECT_DIR$/tflCodingChallenge/tflCodingChallenge.iml" />
-    </modules>
-  </component>
-</project>
