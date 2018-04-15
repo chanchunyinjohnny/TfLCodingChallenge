@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TFL Road Check</title>
+    <script src="lib/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+<div>
+    <form>
+        Road name:<br>
+        <input type="text" name="roadName" id="roadName"><br>
+    </form>
+
+    <button id="button">Submit</button>
+</div>
+
+<div>
+    Result:</br>
+    <div id="resultArea"></div>
+</div>
+
+<script>
+
+    "use strict";
+
+    //    $(document).ready(function(){
+    //        $("button").click(function(){
+    //            $.ajax({url: "/demo_test.txt", success: function(result){
+    //                $("#resultArea").text(result);
+    //            }});
+    //        });
+    //    });
+
+    jQuery(document).ready(
+            function ($) {
+
+                $("#button").click(function (event) {
+
+                    var data = {}
+                    data["roadName"] = $("#roadName").val();
+                    //data["roadName"] = "A22";
+
+                    $("#button").prop("disabled", true);
+
+                    $.ajax({
+                        type: "POST",
+                        contentType: "application/json",
+                        url: "roadStatus",
+                        data: JSON.stringify(data),
+                        dataType: 'json',
+                        timeout: 600000,
+                        success: function (data) {
+                            $("#button").prop("disabled", false);
+                            $("#resultArea").text(data);
+                        },
+                        error: function (e) {
+                            $("#button").prop("disabled", false);
+                            //...
+                        }
+                    });
+                });
+            });
+
+//    $("button").click(function(){
+//        $.post("roadStatus",
+//                {
+//                    roadName: "A2",
+//                },
+//                function(data, status){
+//                    alert("Data: " + data + "\nStatus: " + status);
+//                });
+//    });
+
+</script>
+
+
+</body>
+</html>
