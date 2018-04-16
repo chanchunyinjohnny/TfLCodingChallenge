@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TfLCodingChallenge.iml" filepath="$PROJECT_DIR$/.idea/TfLCodingChallenge.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tflCodingChallenge/tflCodingChallenge.iml" filepath="$PROJECT_DIR$/tflCodingChallenge/tflCodingChallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tflCodingChallenge/tflcodingchallenge.iml" filepath="$PROJECT_DIR$/tflCodingChallenge/tflcodingchallenge.iml" />
     </modules>
   </component>
 </project>
