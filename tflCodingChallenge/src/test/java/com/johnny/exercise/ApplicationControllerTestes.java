@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Created by johnn on 16/04/2018.
  */
-public class TestApplicationController extends TflCodingChallengeApplicationTests {
+public class ApplicationControllerTestes extends TflCodingChallengeApplicationTests {
 
     @Autowired
     private WebApplicationContext webApplicationContext;
