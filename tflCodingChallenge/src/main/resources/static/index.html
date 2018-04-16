@@ -25,14 +25,6 @@
 
     "use strict";
 
-    //    $(document).ready(function(){
-    //        $("button").click(function(){
-    //            $.ajax({url: "/demo_test.txt", success: function(result){
-    //                $("#resultArea").text(result);
-    //            }});
-    //        });
-    //    });
-
     jQuery(document).ready(
             function ($) {
 
@@ -53,7 +45,10 @@
                         timeout: 600000,
                         success: function (data) {
                             $("#button").prop("disabled", false);
-                            $("#resultArea").text(data);
+
+                            var str = JSON.stringify(data);
+
+                            $("#resultArea").text(str);
                         },
                         error: function (e) {
                             $("#button").prop("disabled", false);
@@ -62,16 +57,6 @@
                     });
                 });
             });
-
-//    $("button").click(function(){
-//        $.post("roadStatus",
-//                {
-//                    roadName: "A2",
-//                },
-//                function(data, status){
-//                    alert("Data: " + data + "\nStatus: " + status);
-//                });
-//    });
 
 </script>
 
